@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+		<style>
+			.avatar-upload {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				border: 1px solid gray;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container mt-3 mb-3">
+			<h2>應徵人員報名表</h2>
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">基本資料</h3>
+					<div class="card-tools"></div>
+				</div>
+				<!-- /.card-header -->
+				<div class="card-body">
+					<div class="mb-4">
+						<div class="avatar-upload"></div>
+					</div>
+					<div class="row">
+						<div class="col-3">
+							<div class="form-group">
+								<label for="name">姓名</label>
+								<input type="text" name="" id="name" class="form-control" />
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label>出生年月日</label>
+								<div class="input-group date" id="birthday" data-target-input="nearest">
+									<input type="text" class="form-control datetimepicker-input" data-target="#birthday" />
+									<div class="input-group-append" data-target="#birthday" data-toggle="datetimepicker">
+										<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-1"></div>
+						<div class="col-2">
+							<div class="form-group">
+								<label for="gender">性別</label>
+								<input type="text" name="" id="gender" class="form-control" placeholder="女" />
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="form-group">
+								<label for="blood">血型</label>
+								<input type="text" name="" id="blood" class="form-control" placeholder="Ｂ" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="birthplace">出生地</label>
+								<input type="text" name="" id="birthplace" class="form-control" />
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="idnum">身分證字號</label>
+								<input type="text" name="" id="idnum" class="form-control" placeholder="F2281XXXXX" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /.card-body -->
+			</div>
+			<!-- /.card -->
+		</div>
+	</body>
+</html>
