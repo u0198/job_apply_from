@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>應徵表</title>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -41,13 +41,21 @@
 						<div class="avatar-upload"></div>
 					</div>
 					<div class="row">
-						<div class="col-3">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="idnum">身分證字號</label>
+								<input type="text" name="" id="idnum" class="form-control" placeholder="F2281XXXXX" />
+							</div>
+						</div>
+						<div class="col-sm">
 							<div class="form-group">
 								<label for="name">姓名</label>
 								<input type="text" name="" id="name" class="form-control" />
 							</div>
 						</div>
-						<div class="col-4">
+					</div>
+					<div class="row">
+						<div class="col-sm">
 							<div class="form-group">
 								<label>出生年月日</label>
 								<div class="input-group date" id="birthday" data-target-input="nearest">
@@ -58,38 +66,146 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-1"></div>
-						<div class="col-2">
-							<div class="form-group">
-								<label for="gender">性別</label>
-								<input type="text" name="" id="gender" class="form-control" placeholder="女" />
+						<div class="col-sm">
+							<div class="form-gorup">
+								<label for="marriage">婚姻狀況</label>
+								<select name="" id="marriage" class="form-control">
+									<option value="">請選擇</option>
+									<option value="unmarried">未婚</option>
+									<option value="married">已婚</option>
+									<option value="divorce">離婚</option>
+									<option value="apart">分居</option>
+								</select>
 							</div>
 						</div>
-						<div class="col-2">
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="height">身高(公分)</label>
+								<input type="text" name="" id="height" class="form-control" placeholder="176" />
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-gorup">
+								<label for="weight">體重(公斤)</label>
+								<input type="text" name="" id="weight" class="form-control" placeholder="66" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
 							<div class="form-group">
 								<label for="blood">血型</label>
 								<input type="text" name="" id="blood" class="form-control" placeholder="Ｂ" />
 							</div>
 						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="gender">性別</label>
+								<input type="text" name="" id="gender" class="form-control" placeholder="女" />
+							</div>
+						</div>
 					</div>
 					<div class="row">
-						<div class="col-6">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="day_phone">連絡電話(日間)</label>
+								<input type="text" name="" id="day_phone" class="form-control" />
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="night_phone">連絡電話(夜間)</label>
+								<input type="text" name="" id="night_phone" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="mobile">手機</label>
+								<input type="text" name="" id="mobile" class="form-control" />
+							</div>
+						</div>
+						<div class="col-sm">
 							<div class="form-group">
 								<label for="birthplace">出生地</label>
 								<input type="text" name="" id="birthplace" class="form-control" />
 							</div>
 						</div>
-						<div class="col-6">
+					</div>
+					<div class="row">
+						<div class="col-sm">
 							<div class="form-group">
-								<label for="idnum">身分證字號</label>
-								<input type="text" name="" id="idnum" class="form-control" placeholder="F2281XXXXX" />
+								<label for="residence_addr">戶籍地址</label>
+								<input type="text" name="" id="residence_addr" class="form-control" />
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="contact_addr" class="d-flex justify-content-between">
+									<span>通訊地址</span>
+									<button type="button" class="btn btn-block btn-info btn-sm pt-0 pb-0" style="width: 70px">
+										<span>同戶籍</span>
+									</button>
+								</label>
+								<input type="text" name="" id="contact_addr" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="army_category">軍種兵科</label>
+								<input type="text" name="" id="army_category" class="form-control" />
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="army_level">階級</label>
+								<input type="text" name="" id="army_level" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="army_begin">入伍日期</label>
+								<div class="input-group date" id="army_begin" data-target-input="nearest">
+									<input type="text" class="form-control datetimepicker-input" data-target="#army_begin" />
+									<div class="input-group-append" data-target="#army_begin" data-toggle="datetimepicker">
+										<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="army_end">退伍日期</label>
+								<div class="input-group date" id="army_end" data-target-input="nearest">
+									<input type="text" class="form-control datetimepicker-input" data-target="#army_end" />
+									<div class="input-group-append" data-target="#army_end" data-toggle="datetimepicker">
+										<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="army_period">服役期限</label>
+								<div class="d-flex" style="gap: 10px">
+									<input type="text" name="" id="army_yr" class="form-control" placeholder="年" />
+									<input type="text" name="" id="army_mon" class="form-control" placeholder="月" />
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- /.card-body -->
 			</div>
-			<!-- /.card -->
 		</div>
 	</body>
 </html>
