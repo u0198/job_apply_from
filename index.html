@@ -11,6 +11,12 @@
 			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+			integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+			crossorigin="anonymous"
+		/>
 		<script
 			src="https://code.jquery.com/jquery-3.6.3.min.js"
 			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
@@ -25,17 +31,20 @@
 				border-radius: 50%;
 				border: 1px solid gray;
 			}
+			.row-hover:hover {
+				background: var(--light);
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container mt-3 mb-3">
 			<h2>應徵人員報名表</h2>
+			<!-- 基本資料 -->
 			<div class="card">
 				<div class="card-header">
 					<h3 class="card-title">基本資料</h3>
 					<div class="card-tools"></div>
 				</div>
-				<!-- /.card-header -->
 				<div class="card-body">
 					<div class="mb-4">
 						<div class="avatar-upload"></div>
@@ -43,13 +52,19 @@
 					<div class="row">
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="idnum">身分證字號</label>
+								<label for="idnum">
+									<span>身分證字號</span>
+									<span class="text-danger">*</span>
+								</label>
 								<input type="text" name="" id="idnum" class="form-control" placeholder="F2281XXXXX" />
 							</div>
 						</div>
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="name">姓名</label>
+								<label for="name">
+									<span>姓名</span>
+									<span class="text-danger">*</span>
+								</label>
 								<input type="text" name="" id="name" class="form-control" />
 							</div>
 						</div>
@@ -57,7 +72,10 @@
 					<div class="row">
 						<div class="col-sm">
 							<div class="form-group">
-								<label>出生年月日</label>
+								<label>
+									<span>出生年月日</span>
+									<span class="text-danger">*</span>
+								</label>
 								<div class="input-group date" id="birthday" data-target-input="nearest">
 									<input type="text" class="form-control datetimepicker-input" data-target="#birthday" />
 									<div class="input-group-append" data-target="#birthday" data-toggle="datetimepicker">
@@ -68,7 +86,10 @@
 						</div>
 						<div class="col-sm">
 							<div class="form-gorup">
-								<label for="marriage">婚姻狀況</label>
+								<label for="marriage">
+									<span>婚姻狀況</span>
+									<span class="text-danger">*</span>
+								</label>
 								<select name="" id="marriage" class="form-control">
 									<option value="">請選擇</option>
 									<option value="unmarried">未婚</option>
@@ -76,6 +97,26 @@
 									<option value="divorce">離婚</option>
 									<option value="apart">分居</option>
 								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="blood">
+									<span>血型</span>
+									<span class="text-danger">*</span>
+								</label>
+								<input type="text" name="" id="blood" class="form-control" placeholder="Ｂ" />
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="gender">
+									<span>性別</span>
+									<span class="text-danger">*</span>
+								</label>
+								<input type="text" name="" id="gender" class="form-control" placeholder="女" />
 							</div>
 						</div>
 					</div>
@@ -96,27 +137,19 @@
 					<div class="row">
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="blood">血型</label>
-								<input type="text" name="" id="blood" class="form-control" placeholder="Ｂ" />
-							</div>
-						</div>
-						<div class="col-sm">
-							<div class="form-group">
-								<label for="gender">性別</label>
-								<input type="text" name="" id="gender" class="form-control" placeholder="女" />
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm">
-							<div class="form-group">
-								<label for="day_phone">連絡電話(日間)</label>
+								<label for="day_phone">
+									<span>連絡電話(日間)</span>
+									<span class="text-danger">*</span>
+								</label>
 								<input type="text" name="" id="day_phone" class="form-control" />
 							</div>
 						</div>
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="night_phone">連絡電話(夜間)</label>
+								<label for="night_phone">
+									<span>連絡電話(夜間)</span>
+									<span class="text-danger">*</span>
+								</label>
 								<input type="text" name="" id="night_phone" class="form-control" />
 							</div>
 						</div>
@@ -124,7 +157,10 @@
 					<div class="row">
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="mobile">手機</label>
+								<label for="mobile">
+									<span>手機</span>
+									<span class="text-danger">*</span>
+								</label>
 								<input type="text" name="" id="mobile" class="form-control" />
 							</div>
 						</div>
@@ -138,17 +174,24 @@
 					<div class="row">
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="residence_addr">戶籍地址</label>
+								<label for="residence_addr">
+									<span>戶籍地址</span>
+									<span class="text-danger">*</span>
+								</label>
 								<input type="text" name="" id="residence_addr" class="form-control" />
 							</div>
 						</div>
 						<div class="col-sm">
 							<div class="form-group">
 								<label for="contact_addr" class="d-flex justify-content-between">
-									<span>通訊地址</span>
-									<button type="button" class="btn btn-block btn-info btn-sm pt-0 pb-0" style="width: 70px">
-										<span>同戶籍</span>
-									</button>
+									<div>
+										<span>通訊地址</span>
+										<span class="text-danger">*</span>
+									</div>
+									<div>
+										<input type="checkbox" name="" id="copy_addr" onclick="setContactAddr()" />
+										<label for="copy_addr" class="form-check-inline mt-0 mb-0">同戶籍</label>
+									</div>
 								</label>
 								<input type="text" name="" id="contact_addr" class="form-control" />
 							</div>
@@ -157,13 +200,19 @@
 					<div class="row">
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="army_category">軍種兵科</label>
+								<label for="army_category">
+									<span>軍種兵科</span>
+									<span class="text-danger">*</span>
+								</label>
 								<input type="text" name="" id="army_category" class="form-control" />
 							</div>
 						</div>
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="army_level">階級</label>
+								<label for="army_level">
+									<span>階級</span>
+									<span class="text-danger">*</span>
+								</label>
 								<input type="text" name="" id="army_level" class="form-control" />
 							</div>
 						</div>
@@ -171,7 +220,10 @@
 					<div class="row">
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="army_begin">入伍日期</label>
+								<label for="army_begin">
+									<span>入伍日期</span>
+									<span class="text-danger">*</span>
+								</label>
 								<div class="input-group date" id="army_begin" data-target-input="nearest">
 									<input type="text" class="form-control datetimepicker-input" data-target="#army_begin" />
 									<div class="input-group-append" data-target="#army_begin" data-toggle="datetimepicker">
@@ -182,7 +234,10 @@
 						</div>
 						<div class="col-sm">
 							<div class="form-group">
-								<label for="army_end">退伍日期</label>
+								<label for="army_end">
+									<span>退伍日期</span>
+									<span class="text-danger">*</span>
+								</label>
 								<div class="input-group date" id="army_end" data-target-input="nearest">
 									<input type="text" class="form-control datetimepicker-input" data-target="#army_end" />
 									<div class="input-group-append" data-target="#army_end" data-toggle="datetimepicker">
@@ -195,7 +250,10 @@
 					<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
-								<label for="army_period">服役期限</label>
+								<label for="army_period">
+									<span>服役期限</span>
+									<span class="text-danger">*</span>
+								</label>
 								<div class="d-flex" style="gap: 10px">
 									<input type="text" name="" id="army_yr" class="form-control" placeholder="年" />
 									<input type="text" name="" id="army_mon" class="form-control" placeholder="月" />
@@ -204,8 +262,30 @@
 						</div>
 					</div>
 				</div>
-				<!-- /.card-body -->
+			</div>
+			<!-- 學歷 -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">
+						<span class="pr-1">最高學歷</span>
+						<span class="text-danger h6">*最少新增一筆</span>
+					</h3>
+					<div class="card-tools">
+						<button type="button" class="btn btn-sm btn-info" onclick="showSchoolForm()">+</button>
+					</div>
+				</div>
+				<div id="school_content" class="card-body"></div>
 			</div>
 		</div>
+
+		<div class="row justify-content-center mb-5" style="gap: 10px">
+			<button class="btn btn-outline-info">儲存</button>
+			<button class="btn btn-info" onclick="submit()">送出</button>
+		</div>
+
+		<script>
+			function submit() {}
+		</script>
+		<script src="./school.js"></script>
 	</body>
 </html>
