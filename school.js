@@ -89,6 +89,33 @@ function addOrUpdateSchool() {
 	}
 }
 
+function setSchoolContent() {
+	let school_centent = '';
+	$.each(school_list, function (index, item) {
+		school_centent += `
+      <div key="${index}" class="row align-items-center mb-3 row-hover">
+        <div class="col-sm">
+          <h5 class="mr-2 d-inline font-weight-bold">${item.name}</h5>
+          <span class="text-secondary h6">${item.enter_yr}/${item.enter_mon} ~ ${item.leave_yr}/${item.leave_mon}</span>
+          <div class="text-secondary d-flex align-items-center h6">
+            <span>${item.depart}(${item.type})</span><span class="pl-1 pr-1">|</span><span>${item.status}</span>
+          </div>
+        </div>
+        <div class="col-sm text-right">
+          <button type="button" class="btn btn-sm btn-outline-info" onclick="editSchool(this)">
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button type="button" class="btn btn-sm btn-outline-info" onclick="deleteSchool(this)">
+            <i class="bi bi-trash3"></i>
+          </button>
+        </div>
+      </div>
+      `;
+	});
+
+	$('#school_content').html(school_centent);
+}
+
 function editSchool(e) {
 	isEdit = true;
 	showSchoolForm();
@@ -228,33 +255,6 @@ function showSchoolForm() {
 			text: i,
 		}).appendTo('#school_leave_mon');
 	}
-}
-
-function setSchoolContent() {
-	let school_centent = '';
-	$.each(school_list, function (index, item) {
-		school_centent += `
-      <div key="${index}" class="row align-items-center mb-3 row-hover">
-        <div class="col-sm">
-          <h5 class="mr-2 d-inline font-weight-bold">${item.name}</h5>
-          <span class="text-secondary h6">${item.enter_yr}/${item.enter_mon} ~ ${item.leave_yr}/${item.leave_mon}</span>
-          <div class="text-secondary d-flex align-items-center h6">
-            <span>${item.depart}(${item.type})</span><span class="pl-1 pr-1">|</span><span>${item.status}</span>
-          </div>
-        </div>
-        <div class="col-sm text-right">
-          <button type="button" class="btn btn-sm btn-outline-info" onclick="editSchool(this)">
-            <i class="bi bi-pencil-square"></i>
-          </button>
-          <button type="button" class="btn btn-sm btn-outline-info" onclick="deleteSchool(this)">
-            <i class="bi bi-trash3"></i>
-          </button>
-        </div>
-      </div>
-      `;
-	});
-
-	$('#school_content').html(school_centent);
 }
 
 function setContactAddr() {

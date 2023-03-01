@@ -276,6 +276,131 @@
 				</div>
 				<div id="school_content" class="card-body"></div>
 			</div>
+			<!-- 工作經歷 -->
+			<div class="card">
+				<div class="card-header">
+					<h3 class="card-title">
+						<span class="pr-1">工作經歷</span>
+					</h3>
+					<div class="card-tools">
+						<button type="button" class="btn btn-sm btn-info" onclick="showWorkForm()">+</button>
+					</div>
+				</div>
+				<div id="work_content" class="card-body">
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="work_place">
+									<span>服務處所名稱</span>
+									<span class="text-danger">*</span>
+								</label>
+								<input type="text" name="" id="work_place" class="form-control" />
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="work_job">
+									<span>擔任職務</span>
+									<span class="text-danger">*</span>
+								</label>
+								<input type="text" name="" id="work_job" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="work_begin">
+									<span>到職日</span>
+									<span class="text-danger">*</span>
+								</label>
+								<div class="input-group date" id="work_begin_date" data-target-input="nearest">
+									<input type="text" class="form-control datetimepicker-input" data-target="#work_begin_date" />
+									<div class="input-group-append" data-target="#work_begin_date" data-toggle="datetimepicker">
+										<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="work_end">
+									<span>離職日</span>
+									<!-- <span class="text-danger">*</span> -->
+								</label>
+								<div class="input-group date" id="work_end_date" data-target-input="nearest">
+									<input type="text" class="form-control datetimepicker-input" data-target="#work_end_date" />
+									<div class="input-group-append" data-target="#work_end_date" data-toggle="datetimepicker">
+										<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="work_salary">
+									<span>離職時薪資</span>
+									<span class="text-danger">*</span>
+								</label>
+								<div class="d-md-flex" style="gap: 10px">
+									<select name="" id="salary_curr" class="form-control">
+										<option value="NTD">NTD</option>
+										<option value="RMB">RMB</option>
+									</select>
+									<input type="text" name="" id="salary_mon" class="form-control" placeholder="月薪" />
+									<input type="text" name="" id="salary_yr" class="form-control" placeholder="年薪" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="work_leave">
+									<span>離職原因</span>
+									<span class="text-danger">*</span>
+								</label>
+								<input type="text" name="" id="work_leave" class="form-control" />
+							</div>
+						</div>
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="work_addr">
+									<span>地點</span>
+									<span class="text-danger">*</span>
+								</label>
+								<input type="text" name="" id="work_addr" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm">
+							<div class="form-group">
+								<label for="work_supervisor">
+									<span>服務單位主管</span>
+									<span class="text-danger">*</span>
+								</label>
+								<div class="d-md-flex" style="gap: 10px">
+									<input type="text" name="" id="supervisor_name" class="form-control" placeholder="姓名˙" />
+									<input type="text" name="" id="supervisor_title" class="form-control" placeholder="職稱" />
+									<input type="text" name="" id="supervisor_relation" class="form-control" placeholder="與本人工作上關係" />
+									<input type="text" name="" id="supervisor_contact" class="form-control" placeholder="連絡電話" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm text-center">
+							<div class="form-group">
+								<button id="school_cancel" class="btn btn-outline-info" onclick="setSchoolContent()">取消</button>
+								<button id="school_save" class="btn btn-info" onclick="addOrUpdateSchool()">儲存</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<div class="row justify-content-center mb-5" style="gap: 10px">
@@ -284,7 +409,20 @@
 		</div>
 
 		<script>
-			function submit() {}
+			let work_list = [];
+			let isEdit = false;
+			let editIndex = 0;
+
+			function showWorkForm() {
+				$('#work_content').html(``);
+			}
+
+			function addOrUpdateWork() {
+				let work = {
+					place: $('#work_place').val().trim(),
+					job: $('#work_job').val().trim(),
+				};
+			}
 		</script>
 		<script src="./school.js"></script>
 	</body>
