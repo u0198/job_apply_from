@@ -294,14 +294,14 @@
 			<div class="card">
 				<div class="card-header">
 					<h3 class="card-title">
-						<span class="pr-1">競業服務</span>
+						<span class="pr-1">競業服務 (四等親內親屬是否於同業中任職，請誠實填寫，經查證若不屬實，則同意公司開除處分)</span>
 						<label for="compete_validation" class="text-danger"></label>
 					</h3>
 					<div class="card-tools">
-						<button class="btn btn-sm btn-info">+</button>
+						<button class="btn btn-sm btn-info" onclick="showCompeteForm()">+</button>
 					</div>
 				</div>
-				<div class="card-body"></div>
+				<div id="compete_content" class="card-body"></div>
 			</div>
 			<!-- 緊急聯絡人 -->
 			<div class="card">
@@ -354,6 +354,7 @@
 				$.getScript('./school.js');
 				$.getScript('./work.js');
 				$.getScript('./family.js');
+				$.getScript('./compete.js');
 			});
 		</script>
 	</body>
